@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <title>
+        Portfolio - Daniel Tönnies
+    </title>
+    <link rel="stylesheet" href = "style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@200;300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<section class="header" id="header">
+    <nav>
+        <a href="#header">DANIEL TOENNIES</a>
+        <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hideMenue()"></i>
+            <ul>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#projects">PROJECTS</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+                <li><a href="#blog">BLOG</a></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenue()"></i>
+    </nav>
+
+<div class="text-box">
+    <h1>hello there</h1>
+    <h3>it's me, Daniel. The fullest full-stack developer</h3>
+    <a href="#about" class="hero-btn">wanna learn more?</a>
+</div>
+
+</section>
+
+
+<section class="about" id="about">
+    <h1>About me</h1>
+</section>
+
+
+<section class="projects" id="projects">
+<div class="project-container">
+    <div class="project-header">
+        <h1>Projects</h1>
+    </div>
+<div class="project-all">
+    <div class="project-item">
+        <div class="project-info">
+            <h1>Timetable Generation and Optimization</h1>
+            <h2>C# WPF SQL</h2>
+            <p>Life is fast nowadays. Therefore, the use of scheduling and time optimization is indispensable.
+                This topic is coverd in my thesis where I accomplished to create an algorithm to solve scheduling problems for different types of schools. 
+                This algorithm is based on the idea of an genetic algorithm which means the solution evolves over time to improve itself.</p>
+        </div>
+        <div class="project-image">
+            <img src="images/banner.jpeg" alt="img">
+        </div>
+    </div>
+    <div class="project-item">
+        <div class="project-info">
+            <h1>Data Visualization COVID-19</h1>
+            <h2>WPF C#</h2>
+            <p>Life is fast nowadays. Therefore, the use of scheduling and time optimization is indispensable.
+                This topic is coverd in my thesis where I accomplished to create an algorithm to solve scheduling problems for different types of schools. 
+                This algorithm is based on the idea of an genetic algorithm which means the solution evolves over time to improve itself.</p>
+        </div>
+        <div class="project-image">
+            <img src="images/proj2.png" alt="img">
+        </div>
+    </div>
+    <div class="project-item">
+        <div class="project-info">
+            <h1>Neural Network Library</h1>
+            <h2>Python TensorFlow</h2>
+            <p>Life is fast nowadays. Therefore, the use of scheduling and time optimization is indispensable.
+                This topic is coverd in my thesis where I accomplished to create an algorithm to solve scheduling problems for different types of schools. 
+                This algorithm is based on the idea of an genetic algorithm which means the solution evolves over time to improve itself.</p>
+        </div>
+        <div class="project-image">
+            <img src="images/proj1.jpg" alt="img">
+        </div>
+    </div>
+</div>
+</div>
+</section>
+
+<section class="contact" id="contact">
+    <h1>Contact</h1>
+
+    <div class="contact-text">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam omnis accusantium tenetur, mollitia inventore molestiae voluptas quod enim quae delectus maxime est nobis consequatur eos sapiente perspiciatis aut cum placeat!</p>
+    </div>
+
+    <div class="formular">
+        <form onsubmit="sendMail(); reset(); return false;">
+            <h3>Get in touch</h3>
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Mailadress" required>
+            <textarea id="message" rows="6" placeholder="Request Text"></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+
+    <div class="icons">
+        <a onclick="openLink('https:/\\/www.instagram.com/tdani3l/')">
+            <i class="fa fa-instagram"></i>
+        </a>
+        <a onclick="openLink('https:/\\/github.com/tdani3l')">
+            <i class="fa fa-github"></i>
+        </a>
+    </div>
+</section>
+
+<section class="blog" id="blog">
+    <h1>Blog</h1>
+    <p class="textlight">bli bla blup</p>
+</section>
+
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script>
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenue(){
+        navLinks.style.right = "0";
+    }
+    function hideMenue(){
+        navLinks.style.right = "-200px";
+    }
+
+    function openLink(link){
+        window.open(link);
+    }
+
+    function sendMail(){
+        Email.send({
+            Host : "smtp.gmail.com",
+            Username : "dev.daniel.sd@gmail.com",
+            Password : "kcjjvlcpuknnqfbu",
+            To : 'tonniesd@gmail.com',
+            From : document.getElementById("email").value,
+            Subject : "Contact Equiry",
+            Body : "Name: " + document.getElementById("name").value
+                + "<br> Email: " + document.getElementById("email").value
+                + "<br> Message: " + document.getElementById("message").value
+        }).then(
+        message => alert("Message Sent Succesfully")
+        );
+    }
+</script>
+
+</body>
+
+</html>
