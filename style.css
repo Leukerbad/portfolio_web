@@ -185,6 +185,11 @@ nav .fa{
     section h1{
         font-size: 37px;
     }
+    .ab-item-left, .ab-item-right{
+        flex: 0 0 100%;
+        padding: 0;
+        max-width: 100%;
+    }
 }
 
 .about{
@@ -450,4 +455,68 @@ section .project-item .project-info h1{
     form textarea{
         height: 373px;
     }
+}
+
+.row{
+    display: flex;
+    flex-wrap: 	wrap;
+    position: relative;
+}
+
+.ab-item-left{
+    margin-bottom: 30px;
+    flex: 0 0 50%;
+    max-width: 27%;
+    padding: 0 1% 0 22%;
+}
+
+.ab-item-right{
+    margin-bottom: 30px;
+    flex: 0 0 50%;
+    max-width: 27%;
+    padding: 0 22% 0 1%;
+}
+
+.ab-inner{
+    background-color: #985E6D;
+    border: 1px solid #98878f;
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0,5s ease;
+    min-width: 270px;
+}
+
+.ab-inner:hover{
+    box-shadow: 0 0 20px rgba(19, 17, 17, 0.15);
+}
+
+.ab-icon{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    display: block;
+    background-color: #192231;
+    margin: 0 auto 30px;
+    text-align: center;
+}
+
+.ab-icon .fa{
+    font-size: 40px;
+    line-height: 60px;
+    color: var(--skin-color);
+    transition: all 0.3s ease;
+}
+
+.ab-inner:hover .ab-icon{
+    background: var(--skin-color);
+}
+
+.ab-inner:hover .ab-icon .fa{
+     font-size: 25px;
+     color: #494E6B;
+}
+
+.ab-inner p{
+    margin-bottom: 44px;
+    height: 350px;
 }
