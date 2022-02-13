@@ -7,6 +7,7 @@
         Portfolio - Daniel Tönnies
     </title>
     <link rel="stylesheet" href = "style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@200;300;400;600&display=swap" rel="stylesheet">
@@ -30,7 +31,7 @@
 
 <div class="text-box">
     <h1>hello there</h1>
-    <h3>it's me, Daniel. The fullest full-stack developer</h3>
+    <h3>it's me, Daniel:<br><span class="typing"></span></h3>
     <a href="#about" class="hero-btn">learn more</a>
 </div>
 
@@ -189,6 +190,13 @@
         message => alert("Message Sent Succesfully")
         );
     }
+
+    var typed = new Typed(".typing", {
+        strings: ["Back-End Developer", "Full-Stack Developer", "Database-Expert", "agile Developer"],
+        typeSpeed : 100,
+        backSpeed: 60,
+        loop: true
+    });
 </script>
 
 </body>
